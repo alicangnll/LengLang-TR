@@ -103,10 +103,12 @@ elif tokenler[deger] == "CIKIS":
 exit()
 # CIKIS girdisi tanımlandı
 
-elif tokenler[deger] == "YUVARLA":
-yuvarla = = float(input(deger))
-print(yuvarla)
+elif tokenler[deger] == 'YUVARLA':
+if tokenler[deger + 2][0:4] == 'OPERATOR':
+veri = eval(tokenler[deger + 2][5:])
+YERLESTIR(tokenler[deger + 1],str(float(input(veri))))
 deger += 3
+
 #YUVARLA girdisi tanımlandı
 
 elif tokenler[deger] == 'EKLE':
