@@ -101,6 +101,7 @@ deger += 3
 
 elif tokenler[deger] == "CIKIS":
 exit()
+
 # CIKIS girdisi tanımlandı
 
 elif tokenler[deger] == 'YUVARLA':
