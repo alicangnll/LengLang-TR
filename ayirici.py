@@ -104,8 +104,8 @@ exit()
 # CIKIS girdisi tanımlandı
 
 elif tokenler[deger] == "YUVARLA":
-deger = float(input())
-print(deger)
+yuvarla = = float(input(deger))
+print(yuvarla)
 deger += 3
 #YUVARLA girdisi tanımlandı
 
