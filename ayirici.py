@@ -101,7 +101,6 @@ deger += 3
 
 elif tokenler[deger] == "CIKIS":
 exit()
-
 # CIKIS girdisi tanımlandı
 
 elif tokenler[deger] == 'YUVARLA':
@@ -109,7 +108,6 @@ if tokenler[deger + 2][0:4] == 'OPERATOR':
 veri = eval(tokenler[deger + 2][5:])
 YERLESTIR(tokenler[deger + 1],str(float(input(veri))))
 deger += 3
-
 #YUVARLA girdisi tanımlandı
 
 elif tokenler[deger] == 'EKLE':
@@ -186,3 +184,9 @@ YERLESTIR(tokenler[deger + 1],str(var_data - data))
 deger += 3
 else:
 deger += 1
+
+    except Exception as e:
+        if str(e) == "HATA : list index out of range":
+            pass
+        else:
+            print(e)
