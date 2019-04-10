@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 # LengLang - Python-based Turkish Experimental Language
 semboller = {}
-
 def DEGISKENAL(varname, semboller):
-if varname in semboller:
-return semboller[varname]
-
-def YERLESTIR(varname, varvalue):
-global semboller
-semboller[varname[4:]] = varvalue
+    if varname in semboller:
+        return semboller[varname]
+        def YERLESTIR(varname, varvalue):
+            global semboller
+            semboller[varname[4:]] = varvalue
 
 def parser(tokenler,i):
 try:
@@ -186,11 +184,3 @@ if str(e) == "list index out of range":
 pass
 else:
 print(e)
-
-
-
-
-
-
-
-
