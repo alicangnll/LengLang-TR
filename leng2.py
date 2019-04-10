@@ -68,22 +68,22 @@ def leng2(filecontents):
 					else:
 										var_basla = 0
 										tk = ''
-elif tk == 'YAZDIR' or tk == 'yazdır':
+elif tk == 'YAZDIR' or tk == 'yazdir':
 										tokenler.append('YAZDIR')
 										tk = ''
 elif tk == 'EKLE' or tk == 'ekle':
 										tokenler.append('EKLE')
 										tk = ''
-elif tk == 'ÇARP' or tk == 'çarp':
+elif tk == 'CARP' or tk == 'çarp':
 										tokenler.append('CARP')
 										tk = ''
-elif tk == 'BÖL' or tk == 'böl':
+elif tk == 'BOL' or tk == 'böl':
 										tokenler.append('BOL')
 										tk = ''
 elif tk == 'EKSI' or tk == 'eksilt':
 										tokenler.append('EKSI')
 										tk = ''
-elif tk == 'BÖYLEYKEN' or tk == 'böyleyken':
+elif tk == 'BOYLEYKEN' or tk == 'böyleyken':
 										tokenler.append('BOYLEYKEN')
 										tk = ''
 elif tk == 'TEKRAR' or tk == 'tekrar':
