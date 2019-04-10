@@ -68,7 +68,7 @@ def leng2(filecontents):
 					else:
 						var_basla = 0
 						tk = ''
-					elif tk == 'YAZDIR' or tk == 'yazdır':
+elif tk == 'YAZDIR' or tk == 'yazdır':
 	tokenler.append('YAZDIR')
 	tk = ''
 elif tk == 'EKLE' or tk == 'ekle':
