@@ -141,7 +141,7 @@ def DEGISKENAL(varname, semboller):
                                                                                                                 i += 3
                                                                                                             else:
                                                                                                                 i += 3
-                                                                                                        elif tokenler[i] == 'EKSILT':
+                                                                                                        elif tokenler[i] == 'EKSI':
                                                                                                             if tokenler[i + 2][0:4] == 'OPER':
                                                                                                                 veri = eval(tokenler[i + 2][5:])
                                                                                                                 var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
