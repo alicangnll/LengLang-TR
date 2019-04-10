@@ -30,14 +30,14 @@ express = ''
 tk = ''
 
 elif var != '':
-tks.append('DEG:' + var)
+tks.append('DEGER:' + var)
 var = ''
 var_basla = 0
 tk = ''
 
 elif tk == '\n' or tk == '<EOF>':
 if express != '' and isexpress == 1:
-tks.append('OPER:' + express)
+tks.append('OPERATION:' + express)
 express = ''
 
 elif express != '' and isexpress == 0:
@@ -45,7 +45,7 @@ tks.append('SAYI:' + express)
 express = ''
 
 elif var != '':
-tks.append('DEG:' + var)
+tks.append('DEGER:' + var)
 var = ''
 var_basla = 0
 tk = ''
@@ -58,16 +58,16 @@ if express != '' and isexpress == 0:
 tks.append('SAYI:' + express)
 express = ''
 if var != '':
-tks.append('DEG:' + var)
+tks.append('DEGER:' + var)
 var = ''
 var_basla = 0
 if tks[-1] == 'ESITTIR':
-tks[-1] = 'ESES'
+tks[-1] = 'ESIT'
 else:
 tks.append('ESITTIR')
 tk = ''
 
-elif tk == '&' and bolge == False:
+elif tk == '&' or tk == '[deger]' and bolge == False:
 var_basla = 1
 var += tk
 tk = ''
@@ -92,14 +92,14 @@ elif tk == 'YAZDIR' or tk == 'yazdır':
         elif tk == 'BÖL' or tk == 'böl':
             tokenler.append('BOL')
             tk = ''
-        elif tk == 'EKSİLT' or tk == 'eksilt':
-            tokenler.append('EKSILT')
+        elif tk == 'EKSI' or tk == 'eksilt':
+            tokenler.append('EKSI')
             tk = ''
-        elif tk == 'İKEN' or tk == 'iken':
-            tokenler.append('IKEN')
+        elif tk == 'BÖYLEYKEN' or tk == 'böyleyken':
+            tokenler.append('BOYLEYKEN')
             tk = ''
-        elif tk == 'TEKRARLA' or tk == 'tekrarla':
-            tokenler.append('TEKRARLA')
+        elif tk == 'TEKRAR' or tk == 'tekrar':
+            tokenler.append('TEKRAR')
             tk = ''
         elif tk == 'ÇIK' or tk == "çık":
             tokenler.append("CIK")
