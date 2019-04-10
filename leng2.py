@@ -68,61 +68,61 @@ def leng2(filecontents):
 					else:
 										var_basla = 0
 										tk = ''
-									elif tk == 'YAZDIR' or tk == 'yazdır':
+					elif tk == 'YAZDIR' or tk == 'yazdır':
 										tokenler.append('YAZDIR')
 										tk = ''
-									elif tk == 'EKLE' or tk == 'ekle':
+					elif tk == 'EKLE' or tk == 'ekle':
 										tokenler.append('EKLE')
 										tk = ''
-									elif tk == 'ÇARP' or tk == 'çarp':
+					elif tk == 'ÇARP' or tk == 'çarp':
 										tokenler.append('CARP')
 										tk = ''
-									elif tk == 'BÖL' or tk == 'böl':
+					elif tk == 'BÖL' or tk == 'böl':
 										tokenler.append('BOL')
 										tk = ''
-									elif tk == 'EKSI' or tk == 'eksilt':
+					elif tk == 'EKSI' or tk == 'eksilt':
 										tokenler.append('EKSI')
 										tk = ''
-									elif tk == 'BÖYLEYKEN' or tk == 'böyleyken':
+					elif tk == 'BÖYLEYKEN' or tk == 'böyleyken':
 										tokenler.append('BOYLEYKEN')
 										tk = ''
-									elif tk == 'TEKRAR' or tk == 'tekrar':
+					elif tk == 'TEKRAR' or tk == 'tekrar':
 										tokenler.append('TEKRAR')
 										tk = ''
-									elif tk == 'ÇIK' or tk == "çık":
+					elif tk == 'ÇIK' or tk == "çık":
 										tokenler.append("CIK")
 										tk = ""
-									elif tk == 'yap' or tk == 'YAP':
+					elif tk == 'yap' or tk == 'YAP':
 										tokenler.append('YAP')
 										tk = ''
-									elif tk == 'eğer' or tk == 'EĞER':
+					elif tk == 'eğer' or tk == 'EĞER':
 										tokenler.append('EGER')
 										tk = ''
-									elif tk == 'İSE' or tk == 'ise':
+					elif tk == 'İSE' or tk == 'ise':
 										if express != '' and isexpress == 0:
 											tokenler.append('SAYI:' + express)
 											express = ''
 											tokenler.append('ISE')
 											tk = ''
-										elif tk == 'GİRDİ' or tk == 'girdi' or tk == 'GİRİŞ' or tk == 'giriş':
+					elif tk == 'GİRDİ' or tk == 'girdi' or tk == 'GİRİŞ' or tk == 'giriş':
 											tokenler.append('GIRDI')
 											tk = ''
-										elif tk == '0' or tk == '1' or tk == '2' or tk == '3' or tk == '4' or tk == '5' or tk == '6' or tk == '7' or tk == '8' or tk == '9' or tk == '(' or tk == ')':
+					elif tk == '0' or tk == '1' or tk == '2' or tk == '3' or tk == '4' or tk == '5' or tk == '6' or tk == '7' or tk == '8' or tk == '9' or tk == '(' or tk == ')':
 											express += tk
 											tk = ''
-										elif tk == '+' or tk == '-' or tk == '*' or tk == '/' or tk == '%':
+					elif tk == '+' or tk == '-' or tk == '*' or tk == '/' or tk == '%':
 											express += tk
 											isexpress = 1
 											tk = ''
-										elif tk == '"' or tk == ' "':
+					elif tk == '"' or tk == ' "':
 											if bolge == False:
 												bolge = True
-											elif bolge == True:
+					elif bolge == True:
 												tokenler.append(string + '"')
 												string = ''
 												bolge = False
 												tk = ''
-											elif bolge == True:
+					elif bolge == True:
 												string += tk
 												tk = ''
 												return tokenler
