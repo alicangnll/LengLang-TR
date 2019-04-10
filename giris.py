@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # LengLang v0.1
 # Yazar : Ali Can GÖNÜLLÜ
+
 import os
 import time
 from sys import *
