@@ -15,7 +15,7 @@ def calis_shell():
 	try:
 		print("LengLang v0.1 \n")
 		while True:
-			veri = raw_input("<?>": ") + "\n <EOF>"
+			veri = raw_input("<?>: ") + "\n<EOF>"
 			open(".shell_data","w").write(veri)
 			tokenler = leng2(veri)
 			parser(tokenler,0)
