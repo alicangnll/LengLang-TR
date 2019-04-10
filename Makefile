@@ -1,11 +1,11 @@
 all:
-	pyinstaller giris.py leng.py ayirici.py dosya_ac.py --onefile
+	pyinstaller leng leng.py ayirici.py dosya_ac.py --onefile
 	mkdir ../bin
-	mv dist/lenglang ../bin/
+	mv dist/leng ../bin/
 	@echo "Birlestirme : OK"
 install:
-	@sudo cp ../bin/lenglang /usr/bin/
+	@sudo cp ../bin/leng /usr/bin/
 clean:
 	rm -rf build/
 	rm -rf dist/
-	rm lenglang.spec
+	rm leng.spec

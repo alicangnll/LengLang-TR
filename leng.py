@@ -68,7 +68,7 @@ else:
 tokenler.append('ESITTIR')
 tk = ''
 
-elif tk == '&' and bolge == False:
+elif tk == '&' or tk == '[value]' and bolge == False:
 varbasladi = 1
 var += tk
 tk = ''

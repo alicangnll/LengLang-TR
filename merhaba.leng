@@ -1,3 +1,10 @@
+YAZ "MERHABA DÜNYA!"
+&DEGER = "BİR DEĞER GİR"
+YAZ &DEGER
+
+[value]DEGER = "DİGER GİRİS"
+YAZ [value]DEGER
+
 EĞER 100 == 100 İSE
 YAZ "BU BİR EĞER DÖNGÜSÜ"
 YAP

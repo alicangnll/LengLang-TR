@@ -108,6 +108,7 @@ if tokenler[deger + 2][0:4] == 'OPERATOR':
 veri = eval(tokenler[deger + 2][5:])
 YERLESTIR(tokenler[deger + 1],str(float(input(veri))))
 deger += 3
+
 #YUVARLA girdisi tanımlandı
 
 elif tokenler[deger] == 'EKLE':
@@ -138,13 +139,13 @@ veri = eval(tokenler[deger + 2][5:])
 var_data = int(DEGISKENAL(tokenler[deger + 1][4:],semboller))
 YERLESTIR(tokenler[deger + 1],str(var_data * veri))
 deger += 3
-# CARP girdisi tanımlandı
 elif tokenler[deger + 2][0:4] == 'SAYI':
 veri = int(tokenler[deger + 2][5:])
 var_data = int(DEGISKENAL(tokenler[deger + 1][4:],semboller))
 YERLESTIR(tokenler[deger + 1],str(var_data * veri))
 deger += 3
-# SAYI 2.Tanımlama
+# CARP girdisi tanımlandı
+
 elif tokenler[deger] == 'BOLME':
 if tokenler[deger + 2][0:4] == 'OPERATOR':
 veri = eval(tokenler[deger + 2][5:])
@@ -164,23 +165,24 @@ deger += 3
 else:
 deger += 3
 # BOLME girdisi tanımlandı
+
 eif tokenler[deger] == 'CIKAR':
 if tokenler[deger + 2][0:4] == 'OPERATOR':
 veri = eval(tokenler[deger + 2][5:])
 var_data = int(DEGISKENAL(tokenler[deger + 1][4:],semboller))
 YERLESTIR(tokenler[deger + 1],str(var_data - veri)
 deger += 3
-# CIKAR girdisi tanımlandı
 elif tokenler[deger + 2][0:4] == 'SAYI':
-data = int(tokenler[deger + 2][5:])
+veri = int(tokenler[deger + 2][5:])
 var_data = int(DEGISKENAL(tokenler[deger + 1][4:],semboller))
-YERLESTIR(tokenler[deger + 1],str(var_data - data))
+YERLESTIR(tokenler[deger + 1],str(var_data - veri))
 deger += 3
-# SAYI girdisi tanımlandı
+# CIKAR girdisi tanımlandı
+
 elif  tokenler[deger + 2][0:4] == 'DEGER:':
-data =  int(DEGISKENAL(tokenler[deger + 2][4:],semboller))
+veri =  int(DEGISKENAL(tokenler[deger + 2][4:],semboller))
 var_data = int(DEGISKENAL(tokenler[deger + 1][4:],semboller))
-YERLESTIR(tokenler[deger + 1],str(var_data - data))
+YERLESTIR(tokenler[deger + 1],str(var_data - veri))
 deger += 3
 else:
 deger += 1
