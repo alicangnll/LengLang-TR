@@ -19,7 +19,9 @@ def calis_shell():
 			open(".shell_data","w").write(veri)
 			tokenler = leng2(veri)
 			parser(tokenler,0)
+			
 		except:
+			
 			print("\n")
 			exit()
 			
