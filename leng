@@ -21,7 +21,6 @@ def calis_shell():
 			parser(tokenler,0)
 			
 		except:
-			
 			print("\n")
 			exit()
 			
