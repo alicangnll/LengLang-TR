@@ -67,7 +67,7 @@ else:
 tks.append('ESITTIR')
 tk = ''
 
-elif tk == '&' or tk == '[deger]' and bolge == False:
+elif tk == '&' or tk == '[value]' and bolge == False:
 var_basla = 1
 var += tk
 tk = ''
