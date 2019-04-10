@@ -12,7 +12,7 @@ from parser import *
 semboller = {}
 def calis_shell():
 	try:
-	print("LengLang v0.1")
+	print("LengLang v0.1 \n")
 	while True:
 	veri = raw_input("<?>": ") + "\n<EOF>"
 	open(".shell_data","w").write(veri)
