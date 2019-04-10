@@ -1,6 +1,6 @@
+#!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
-# LengLang v0.1
-# Yazar : Ali Can GÖNÜLLÜ
+#LengLang v0.1
 
 import os
 import time
@@ -10,26 +10,28 @@ from leng import *
 from ayirici import ayirici
 
 semboller = {}
-def calis_shell():
-try:
-print("LengLang v0.1 \n")
-while True:
-veri = raw_input("<?>: ") + "\n<EOF>"
-open(".shell_veri","w").write(veri)
-tokenler = leng(veri)
-ayirici(tokenler,0)
-except:
-print("\n")
-exit()
 
-def calis_dosya():
-veri = openfile(argv[1])
-tokenler = leng(veri)
-ayirici(tokenler,0)
+def shell_calis():
+    try:
+        print("LengLang 0.1v\n")
+        while True:
+            veri = raw_input("<?>: ") + "\n<EOF>"
+            open(".shell_data","w").write(veri)
+            tokenler = leng(veri)
+            ayirici(tokenler,0)
+            ##print(symbols)
+    except:
+        print("\n")
+        exit()
 
-if len(argv) == 2:
-calis_dosya()
-elif len(argv) ==1:
-calis_shell()
+def dosya_calis():
+    veri = openfile(argv[1])
+    tokenler = leng(veri)
+    ayirici(tokenler,0)
+
+if leng(argv) == 2:
+    dosya_calis()
+elif leng(argv) == 1:
+    shell_calis()
 else:
-print("ERROR : ASIRI YUKLEME")
+    print("HATA: ÇOK FAZLA ARGÜMAN GİRİLDİ")
