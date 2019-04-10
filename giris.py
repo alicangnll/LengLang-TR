@@ -17,7 +17,7 @@ def shell_calis():
         while True:
             veri = raw_input("<?>: ") + "\n<EOF>"
             open(".shell_data","w").write(veri)
-            tokenler = leng(veri)
+            tokenler = len(veri)
             ayirici(tokenler,0)
             ##print(symbols)
     except:
@@ -26,12 +26,12 @@ def shell_calis():
 
 def dosya_calis():
     veri = openfile(argv[1])
-    tokenler = leng(veri)
+    tokenler = len(veri)
     ayirici(tokenler,0)
 
-if leng(argv) == 2:
+if len(argv) == 2:
     dosya_calis()
-elif leng(argv) == 1:
+elif len(argv) == 1:
     shell_calis()
 else:
     print("HATA: ÇOK FAZLA ARGÜMAN GİRİLDİ")
