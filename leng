@@ -28,7 +28,8 @@ def calis_dosya():
 
 if len(argv) == 2:
         calis_dosya()
-        elif len(argv) == 1:
-                calis_shell()
-                else:
-                        print("HATA: ASIRI YUKLEME")
+        
+elif len(argv) == 1:
+        calis_shell()
+else:
+        print("HATA: ASIRI YUKLEME")
