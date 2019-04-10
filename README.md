@@ -4,5 +4,5 @@ Sürüm : v0.1
 <hr></hr>
 Windows Için :
 <hr></hr>
-Lütfen Dosyalarınızı C:\Python27\Scripts knumuna kopyalayın
+Lütfen Dosyalarınızı C:\Python27\Scripts konumuna kopyalayın
 Kullandığınız Için Teşekkürler
