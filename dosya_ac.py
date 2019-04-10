@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-def dosya_ac(dosyaac)
-veri = open(dosyaac, 'r').read()
+def dosya_ac(filename):
+veri = open(filename, 'r').read()
 veri += '<EOF>'
 return veri

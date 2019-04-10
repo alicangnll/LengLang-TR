@@ -4,7 +4,7 @@ cls
 @cd C:\Python27\Scripts
 @pip update
 @pip install pyinstaller
-@pyinstaller giris.py leng.py dosya_ac.py ayirici.py --onefile
+@pyinstaller leng.py leng2.py dosya_ac.py parser.py --onefile
 @mkdir ../bin/
 @copy dist/leng ../bin/
 @del leng.spec
