@@ -62,7 +62,7 @@ def leng2(filecontents):
 										var += tk
 										tk = ''
 					elif var_basla == 1:
-											if tk != '+' or tk == '-' or tk == '*' or tk == '/' or tk == '%':
+						if tk != '+' or tk == '-' or tk == '*' or tk == '/' or tk == '%':
 												var += tk
 												tk = ''
 					else:
