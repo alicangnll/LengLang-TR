@@ -57,14 +57,14 @@ def leng2(filecontents):
 								else:
 									tks.append('ESITTIR')
 									tk = ''
-								elif tk == '&' and bolge == False:
-									var_basla = 1
-									var += tk
-									tk = ''
-								elif var_basla == 1:
-									if tk != '+' or tk == '-' or tk == '*' or tk == '/' or tk == '%':
+									elif tk == '&' and bolge == False:
+										var_basla = 1
 										var += tk
 										tk = ''
+										elif var_basla == 1:
+											if tk != '+' or tk == '-' or tk == '*' or tk == '/' or tk == '%':
+												var += tk
+												tk = ''
 									else:
 										var_basla = 0
 										tk = ''
