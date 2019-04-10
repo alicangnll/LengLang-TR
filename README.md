@@ -5,6 +5,5 @@ Sürüm : v0.1
 Windows Için :
 <hr></hr>
 <code>Lütfen Dosyalarınızı C:\Python27\Scripts konumuna kopyalayın</code>
-<pre>
+</br>
 Kullandığınız Için Teşekkürler
-</pre>
