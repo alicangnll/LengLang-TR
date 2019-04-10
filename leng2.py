@@ -114,15 +114,15 @@ elif tk == '+' or tk == '-' or tk == '*' or tk == '/' or tk == '%':
 	express += tk
 	isexpress = 1
 	tk = ''
-					elif tk == '"' or tk == ' "':
-											if bolge == False:
-												bolge = True
-					elif bolge == True:
-												tokenler.append(string + '"')
-												string = ''
-												bolge = False
-												tk = ''
-					elif bolge == True:
-												string += tk
-												tk = ''
-												return tokenler
+elif tk == '"' or tk == ' "':
+	if bolge == False:
+		bolge = True
+elif bolge == True:
+	tokenler.append(string + '"')
+	string = ''
+	bolge = False
+	tk = ''
+elif bolge == True:
+	string += tk
+	tk = ''
+return tokenler
