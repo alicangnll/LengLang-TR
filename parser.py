@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# LengLang - Python-based Turkish Experimental Language
 semboller = {}
 
 def DEGISKENAL(varname, semboller):
