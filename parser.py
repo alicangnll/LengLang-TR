@@ -105,71 +105,62 @@ def DEGISKENAL(varname, semboller):
                                                                                                                 i += 3
                                                                                                             else:
                                                                                                                 i += 3
-                                                                                                            elif tokenler[i] == 'CARP':
-                                                                                                                if tokenler[i + 2][0:4] == 'OPER':
-                                                                                                                    veri = eval(tokenler[i + 2][5:])
-                                                                                                                    var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
-                                                                                                                    YERLESTIR(tokenler[i + 1],str(var_data * veri))
-                                                                                                                    i += 3
-
-elif tokenler[i + 2][0:4] == 'SAYI':
-veri = int(tokenler[i + 2][5:])
-var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
-YERLESTIR(tokenler[i + 1],str(var_data * veri))
-i += 3
-
-elif  tokenler[i + 2][0:4] == 'DEG:':
-veri =  int(DEGISKENAL(tokenler[i + 2][4:],semboller))
-var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
-YERLESTIR(tokenler[i + 1],str(var_data * veri))
-i += 3
-else:
-i += 3
-
-elif tokenler[i] == 'BOL':
-if tokenler[i + 2][0:4] == 'OPER':
-veri = eval(tokenler[i + 2][5:])
-var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
-YERLESTIR(tokenler[i + 1],str(var_data / veri))
-i += 3
-
-elif tokenler[i + 2][0:4] == 'SAYI':
-veri = int(tokenler[i + 2][5:])
-var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
-YERLESTIR(tokenler[i + 1],str(var_data / veri))
-i += 3
-
-elif  tokenler[i + 2][0:4] == 'DEG:':
-veri =  int(DEGISKENAL(tokenler[i + 2][4:],semboller))
-var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
-YERLESTIR(tokenler[i + 1],str(var_data / veri))
-i += 3
-else:
-i += 3
-
-elif tokenler[i] == 'EKSILT':
-if tokenler[i + 2][0:4] == 'OPER':
-veri = eval(tokenler[i + 2][5:])
-var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
-YERLESTIR(tokenler[i + 1],str(var_data - veri))
-i += 3
-
-elif tokenler[i + 2][0:4] == 'SAYI':
-veri = int(tokenler[i + 2][5:])
-var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
-YERLESTIR(tokenler[i + 1],str(var_data - veri))
-i += 3
-
-elif  tokenler[i + 2][0:4] == 'DEG:':
-veri =  int(DEGISKENAL(tokenler[i + 2][4:],semboller))
-var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
-YERLESTIR(tokenler[i + 1],str(var_data - veri))
-i += 3
-else:
-i += 1
-
-except Exception as e:
-if str(e) == "list index out of range":
-pass
-else:
-print(e)
+                                                                                                        elif tokenler[i] == 'CARP':
+                                                                                                            if tokenler[i + 2][0:4] == 'OPER':
+                                                                                                                veri = eval(tokenler[i + 2][5:])
+                                                                                                                var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+                                                                                                                YERLESTIR(tokenler[i + 1],str(var_data * veri))
+                                                                                                                i += 3
+                                                                                                            elif tokenler[i + 2][0:4] == 'SAYI':
+                                                                                                                veri = int(tokenler[i + 2][5:])
+                                                                                                                var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+                                                                                                                YERLESTIR(tokenler[i + 1],str(var_data * veri))
+                                                                                                                i += 3
+                                                                                                            elif  tokenler[i + 2][0:4] == 'DEG:':
+                                                                                                                veri =  int(DEGISKENAL(tokenler[i + 2][4:],semboller))
+                                                                                                                var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+                                                                                                                YERLESTIR(tokenler[i + 1],str(var_data * veri))
+                                                                                                                i += 3
+                                                                                                            else:
+                                                                                                                i += 3
+                                                                                                        elif tokenler[i] == 'BOL':
+                                                                                                            if tokenler[i + 2][0:4] == 'OPER':
+                                                                                                                veri = eval(tokenler[i + 2][5:])
+                                                                                                                var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+                                                                                                                YERLESTIR(tokenler[i + 1],str(var_data / veri))
+                                                                                                                i += 3
+                                                                                                            elif tokenler[i + 2][0:4] == 'SAYI':
+                                                                                                                veri = int(tokenler[i + 2][5:])
+                                                                                                                var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+                                                                                                                YERLESTIR(tokenler[i + 1],str(var_data / veri))
+                                                                                                                i += 3
+                                                                                                            elif  tokenler[i + 2][0:4] == 'DEG:':
+                                                                                                                veri =  int(DEGISKENAL(tokenler[i + 2][4:],semboller))
+                                                                                                                var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+                                                                                                                YERLESTIR(tokenler[i + 1],str(var_data / veri))
+                                                                                                                i += 3
+                                                                                                            else:
+                                                                                                                i += 3
+                                                                                                        elif tokenler[i] == 'EKSILT':
+                                                                                                            if tokenler[i + 2][0:4] == 'OPER':
+                                                                                                                veri = eval(tokenler[i + 2][5:])
+                                                                                                                var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+                                                                                                                YERLESTIR(tokenler[i + 1],str(var_data - veri))
+                                                                                                                i += 3
+                                                                                                            elif tokenler[i + 2][0:4] == 'SAYI':
+                                                                                                                veri = int(tokenler[i + 2][5:])
+                                                                                                                var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+                                                                                                                YERLESTIR(tokenler[i + 1],str(var_data - veri))
+                                                                                                                i += 3
+                                                                                                            elif  tokenler[i + 2][0:4] == 'DEG:':
+                                                                                                                veri =  int(DEGISKENAL(tokenler[i + 2][4:],semboller))
+                                                                                                                var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+                                                                                                                YERLESTIR(tokenler[i + 1],str(var_data - veri))
+                                                                                                                i += 3
+                                                                                                            else:
+                                                                                                                i += 1
+                                                                                                            except Exception as e:
+                                                                                                                if str(e) == "list index out of range":
+                                                                                                                    pass
+                                                                                                        else:
+                                                                                                            print(e)
