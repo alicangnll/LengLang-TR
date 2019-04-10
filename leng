@@ -18,9 +18,8 @@ def calis_shell():
                         open(".shell_data","w").write(veri)
                         tokenler = leng2(veri)
                         parser(tokenler,0)
-                        except:
-                                print("\n")
-								
+        except ValueError:
+                                print("HATA!")
                                 exit()
 def calis_dosya():
         veri = dosya_ac(argv[1])
