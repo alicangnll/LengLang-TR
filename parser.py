@@ -83,4 +83,80 @@ elif tokenler[i + 2][0:4] == 'SAYI':
 veri = tokenler[i + 2][5:]
 YERLESTIR(tokenler[i], veri)
 
+elif tokenler[i + 2][0:4] == 'OPER':
+veri = tokenler[i + 2][5:]
+veri = eval(veri)
+YERLESTIR(tokenler[i], veri)
+elif tokenler[i + 2][0:4] == 'DEG:':
+YERLESTIR(tokenler[i], DEGISKENAL(tokenler[i + 2][4:], semboller))
+elif tokenler[i + 2] == 'GIRDI':
+veri = raw_input(tokenler[i + 3].replace('"', ''))
+YERLESTIR(tokenler[i], veri)
+i += 3
+
+elif tokenler[i] == "CIK":
+exit()
+
+elif tokenler[i] == 'EKLE':
+if tokenler[i + 2][0:4] == 'OPER':
+veri = eval(tokenler[i + 2][5:])
+var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+YERLESTIR(tokenler[i + 1],str(var_data + veri))
+i += 3
+
+elif tokenler[i + 2][0:4] == 'SAYI':
+veri = int(tokenler[i + 2][5:])
+var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+YERLESTIR(tokenler[i + 1],str(var_data + veri))
+i += 3
+
+elif  tokenler[i + 2][0:4] == 'DEG:':
+veri =  int(DEGISKENAL(tokenler[i + 2][4:],semboller))
+var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+YERLESTIR(tokenler[i + 1],str(var_data + veri))
+i += 3
+else:
+i += 3
+
+elif tokenler[i] == 'CARP':
+if tokenler[i + 2][0:4] == 'OPER':
+veri = eval(tokenler[i + 2][5:])
+var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+YERLESTIR(tokenler[i + 1],str(var_data * veri))
+i += 3
+
+elif tokenler[i + 2][0:4] == 'SAYI':
+veri = int(tokenler[i + 2][5:])
+var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+YERLESTIR(tokenler[i + 1],str(var_data * veri))
+i += 3
+
+elif  tokenler[i + 2][0:4] == 'DEG:':
+veri =  int(DEGISKENAL(tokenler[i + 2][4:],semboller))
+var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+YERLESTIR(tokenler[i + 1],str(var_data * veri))
+i += 3
+else:
+i += 3
+
+elif tokenler[i] == 'BOL':
+if tokenler[i + 2][0:4] == 'OPER':
+veri = eval(tokenler[i + 2][5:])
+var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+YERLESTIR(tokenler[i + 1],str(var_data / veri))
+i += 3
+
+elif tokenler[i + 2][0:4] == 'SAYI':
+veri = int(tokenler[i + 2][5:])
+var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+YERLESTIR(tokenler[i + 1],str(var_data / veri))
+i += 3
+
+
+
+
+
+
+
+
 
