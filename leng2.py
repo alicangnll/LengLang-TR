@@ -80,7 +80,7 @@ elif tk == 'CARP' or tk == 'çarp':
 elif tk == 'BOL' or tk == 'böl':
 										tokenler.append('BOL')
 										tk = ''
-elif tk == 'EKSI' or tk == 'eksilt':
+elif tk == 'EKSI' or tk == 'eksi':
 										tokenler.append('EKSI')
 										tk = ''
 elif tk == 'BOYLEYKEN' or tk == 'böyleyken':
