@@ -1,6 +1,6 @@
 # LengLang-TR
 LengLang - Python-based Turkish Experimental Language
-<img src="https://alicangonullu.biz/goruntu/53" width="430px" height="460px">
+<p align="left"><img src="https://alicangonullu.biz/goruntu/53" width="430px" height="460px"></p>
 <hr></hr>
 Sürüm v0.1
 <hr></hr>
