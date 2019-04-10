@@ -12,7 +12,6 @@ from parser import *
 semboller = {}
 
 def calis_shell():
-<<<<<<< HEAD
 	try:
 		print("LengLang v0.1 \n")
 		while True:
@@ -23,19 +22,6 @@ def calis_shell():
 		except:
 			print("\n")
 			exit()
-=======
-	
-try:	
-print("LengLang v0.1 \n")
-while True:
-veri = raw_input("<?>": ") + "\n<EOF>"
-open(".shell_data","w").write(veri)
-tokenler = leng2(veri)
-parser(tokenler,0)
-except:
-print("\n")
-exit()
->>>>>>> 453c562560647988cb3747d585c6aa1f98c7c1c6
 
 def calis_dosya():
 	veri = dosya_ac(argv[1])
