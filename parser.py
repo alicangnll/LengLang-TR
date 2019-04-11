@@ -24,7 +24,7 @@ def parser(tokenler,i):
                     if tokenler[i + 1] == tokenler[i + 3]:
                         i += 5
                         a = i
-                 while tokenler[a] != 'YAP':
+        while tokenler[a] != 'YAP':
                             a += 1
                  while tokenler[i] != 'YAP' and i < len(tokenler):
                             parser(tokenler[0:a+i],i)
@@ -50,12 +50,12 @@ def parser(tokenler,i):
 		    if tokenler[i - 1] == tokenler[i - 3]:
 			i += 1
 			a = i
-                 while tokenler[a] != 'TEKRAR':
+        while tokenler[a] != 'TEKRAR':
 			a += 1
-                 while tokenler[i] != 'TEKRAR' and i < len(tokenler) and DEGISKENAL(pram_a_name,semboller) == DEGISKENAL(pram_b_name,semboller):
-                        parser(tokenler[0:a+i],i)
+        while tokenler[i] != 'TEKRAR' and i < len(tokenler) and DEGISKENAL(pram_a_name,semboller) == DEGISKENAL(pram_b_name,semboller):
+                    parser(tokenler[0:a+i],i)
 		    else:
-                 while tokenler[i] != 'TEKRAR':
+        while tokenler[i] != 'TEKRAR':
                         i += 1
 						
         elif tokenler[i] == 'YAZDIR':
@@ -69,8 +69,8 @@ def parser(tokenler,i):
 				veri = eval(veri)
 			elif veri[0:3] == 'DEGER':
 				veri = DEGISKENAL(veri[4:], semboller)
-			print veri
-			i += 2
+				print veri
+				i += 2
 	elif tokenler[i][0:4] == 'DEGER:' and tokenler[i + 1] == 'ESITTIR':
 			if tokenler[i + 2][0] == '"':
 				veri = tokenler[i + 2].replace('"', '')
