@@ -84,7 +84,7 @@ def parser(tokenler,i):
 				YERLESTIR(tokenler[i], veri)
 			elif tokenler[i + 2][0:4] == 'DEGER:':
 				YERLESTIR(tokenler[i], DEGISKENAL(tokenler[i + 2][4:], semboller))
-			elif toks[i + 2] == 'GIRDI':	
+			elif tokenler[i + 2] == 'GIRDI':	
 				veri = raw_input(tokenler[i + 3].replace('"', ''))
 				YERLESTIR(tokenler[i], veri)
 			i += 3
