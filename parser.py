@@ -89,10 +89,10 @@ def parser(tokenler,i):
 			elif tokenler[i + 2] == 'GIRDI':	
 				veri = raw_input(tokenler[i + 3].replace('"', ''))
 				YERLESTIR(tokenler[i], veri)
-			i += 3
-		elif tokenler[i] == "CIK":
-			exit()
-		elif tokenler[i] == 'EKLE':
+				i += 3
+		        elif tokenler[i] == "CIK":
+				exit()
+			elif tokenler[i] == 'EKLE':
 			if tokenler[i + 2][0:4] == 'OPERATION':
 				veri = eval(tokenler[i + 2][5:])
 				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
@@ -113,7 +113,7 @@ def parser(tokenler,i):
 				i += 3
 			else:
 				i += 3
-		elif tokenler[i] == 'CARP':
+			elif tokenler[i] == 'CARP':
 			if tokenler[i + 2][0:4] == 'OPERATION':
 				veri = eval(tokenler[i + 2][5:])
 				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
