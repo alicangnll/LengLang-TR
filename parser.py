@@ -30,7 +30,7 @@ def parser(tokenler,i):
 		parser(tokenler[0:a+i],i)
 		i += 1
 		else:
-			while tokenler[i] != 'YAP':
+	while tokenler[i] != 'YAP':
 		i += 1
 	elif tokenler[i] == 'IKEN':
 		_i = 0
