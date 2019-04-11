@@ -17,7 +17,7 @@ def parser(tokenler,i):
                         tokenler[i + 1] = "SAYI:" + str(eval(tokenler[i + 1][5:]))
                     if tokenler[i + 3][0:4] == "OPERATION":
                         tokenler[i + 3] = "SAYI:" + str(eval(tokenler[i + 3][5:]))
-		if tokenler[i + 1][0:4] == "DEGER:":
+		    if tokenler[i + 1][0:4] == "DEGER:":
                         tokenler[i + 1] = DEGISKENAL(tokenler[i + 1][4:],semboller)
                     if tokenler[i + 3][0:4] == "DEGER":
                         tokenler[i + 3] = DEGISKENAL(tokenler[i + 3][4:],semboller)
