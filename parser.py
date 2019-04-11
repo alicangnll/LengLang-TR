@@ -29,8 +29,8 @@ def parser(tokenler,i):
         while tokenler[i] != 'YAP' and i < len(tokenler):
 		parser(tokenler[0:a+i],i)
 		i += 1
-	else:
-       while tokenler[i] != 'YAP':
+		else:
+	while tokenler[i] != 'YAP':
 	i += 1
 	elif tokenler[i] == 'IKEN':
 		_i = 0
