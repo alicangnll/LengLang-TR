@@ -16,7 +16,7 @@ def leng2(filecontents):
 			if bolge == False:
 				tk = ''
 			elif bolge == True:
-			tk = " "
+				tk = " "
 				if express != '' and isexpress == 1:
 					tks.append('OPERATION:' + express)
 					express = ''
