@@ -103,7 +103,7 @@ def leng2(filecontents):
 					tokenler.append('SAYI:' + express)
 					express = ''
 				tokenler.append('ISE')
-					tk = ''
+				tk = ''
 			elif tk == 'GİRDİ' or tk == 'girdi' or tk == 'GİRİŞ' or tk == 'giriş':
 				tokenler.append('GIRDI')
 				tk = ''
