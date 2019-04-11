@@ -11,7 +11,7 @@ def YERLESTIR(varname, varvalue):
 def parser(tokenler,i):
     try:
 	while i < len(tokenler):
-	    if tokenler[i] == 'EGER':
+	        if tokenler[i] == 'EGER':
 			if tokenler[i + 2] == 'ESIT':
 				if tokenler[i + 1][0:4] == "OPERATION":
 				    tokenler[i + 1] = "SAYI" + str(eval(tokenler[i + 1][5:]))
@@ -29,7 +29,7 @@ def parser(tokenler,i):
         while tokenler[i] != 'YAP' and i < len(tokenler):
 		parser(tokenler[0:a+i],i)
 		i += 1
-		    else:
+	else:
        while tokenler[i] != 'YAP':
 	i += 1
 	elif tokenler[i] == 'IKEN':
@@ -54,7 +54,7 @@ def parser(tokenler,i):
 			a += 1
         while tokenler[i] != 'TEKRAR' and i < len(tokenler) and DEGISKENAL(pram_a_name,semboller) == DEGISKENAL(pram_b_name,semboller):
                     parser(tokenler[0:a+i],i)
-		    else:
+	else:
         while tokenler[i] != 'TEKRAR':
                         i += 1
 						
