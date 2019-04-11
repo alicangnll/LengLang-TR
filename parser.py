@@ -33,28 +33,28 @@ def parser(tokenler,i):
                         while tokenler[i] != 'YAP':
                             i += 1
         elif tokenler[i] == 'IKEN':
-            _i = 0
-            if tokenler[i - 2] == 'ESIT':
-                if tokenler[i - 1][0:4] == "OPERATION":
-                    tokenler[i - 1] = "SAYI:" + str(eval(tokenler[i - 1][5:]))
-                if tokenler[i - 3][0:4] == "OPERATION":
-                    tokenler[i - 3] = "SAYI:" + str(eval(tokenler[i - 3][5:]))
-                if tokenler[i - 1][0:4] == "DEGER:":
-                    pram_a_is_var = True
-                    pram_a_name = tokenler[i - 1][4:]
-                    tokenler[i - 1] = DEGISKENAL(tokenler[i - 1][4:],semboller)
-				if tokenler[i - 3][0:4] == "DEGER:":
-                    pram_b_is_var = True
-                    pram_b_name = tokenler[i - 3][4:]
-                    tokenler[i - 3] = DEGISKENAL(tokenler[i - 3][4:],semboller)
-				if tokenler[i - 1] == tokenler[i - 3]:
-                    i += 1
-                    a = i
+		_i = 0
+            	    if tokenler[i - 2] == 'ESIT':
+                    if tokenler[i - 1][0:4] == "OPERATION":
+			tokenler[i - 1] = "SAYI:" + str(eval(tokenler[i - 1][5:]))
+                    if tokenler[i - 3][0:4] == "OPERATION":
+			tokenler[i - 3] = "SAYI:" + str(eval(tokenler[i - 3][5:]))
+		    if tokenler[i - 1][0:4] == "DEGER:":
+			pram_a_is_var = True
+			pram_a_name = tokenler[i - 1][4:]
+			tokenler[i - 1] = DEGISKENAL(tokenler[i - 1][4:],semboller)
+		    if tokenler[i - 3][0:4] == "DEGER:":
+			pram_b_is_var = True
+			pram_b_name = tokenler[i - 3][4:]
+			tokenler[i - 3] = DEGISKENAL(tokenler[i - 3][4:],semboller)
+		    if tokenler[i - 1] == tokenler[i - 3]:
+			i += 1
+			a = i
                     while tokenler[a] != 'TEKRAR':
-                        a += 1
+			a += 1
                     while tokenler[i] != 'TEKRAR' and i < len(tokenler) and DEGISKENAL(pram_a_name,semboller) == DEGISKENAL(pram_b_name,semboller):
                         parser(tokenler[0:a+i],i)
-				else:
+		    else:
                     while tokenler[i] != 'TEKRAR':
                         i += 1
 						
@@ -87,10 +87,10 @@ def parser(tokenler,i):
 			elif tokenler[i + 2] == 'GIRDI':	
 				veri = raw_input(tokenler[i + 3].replace('"', ''))
 				YERLESTIR(tokenler[i], veri)
-			i += 3
-		elif tokenler[i] == "CIK":
-			exit()
-		elif tokenler[i] == 'EKLE':
+				i += 3
+			elif tokenler[i] == "CIK":
+				exit()
+			elif tokenler[i] == 'EKLE':
 			if tokenler[i + 2][0:4] == 'OPERATION':
 				veri = eval(tokenler[i + 2][5:])
 				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
@@ -111,20 +111,20 @@ def parser(tokenler,i):
 				i += 3
 			else:
 				i += 3
-		elif tokenler[i] == 'CARP':
+			elif tokenler[i] == 'CARP':
 			if tokenler[i + 2][0:4] == 'OPERATION':
 				veri = eval(tokenler[i + 2][5:])
 				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
 				YERLESTIR(tokenler[i + 1],str(var_data * veri))
 				
 				i += 3
-		elif tokenler[i + 2][0:4] == 'SAYI':
+			elif tokenler[i + 2][0:4] == 'SAYI':
 				veri = int(tokenler[i + 2][5:])
 				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
 				YERLESTIR(tokenler[i + 1],str(var_data * veri))
 				
 				i += 3
-		elif tokenler[i + 2][0:4] == 'DEGER:':
+			elif tokenler[i + 2][0:4] == 'DEGER:':
 				veri =  int(DEGISKENAL(tokenler[i + 2][4:],semboller))
 				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
 				YERLESTIR(tokenler[i + 1],str(var_data * veri))
@@ -132,20 +132,20 @@ def parser(tokenler,i):
 				i += 3
 			else:
 				i += 3
-		elif tokenler[i] == 'BOL':
+			elif tokenler[i] == 'BOL':
 			if tokenler[i + 2][0:4] == 'OPERATION':
 				veri = eval(tokenler[i + 2][5:])
 				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
 				YERLESTIR(tokenler[i + 1],str(var_data / veri))
 				
 				i += 3
-		elif tokenler[i + 2][0:4] == 'SAYI':
+			elif tokenler[i + 2][0:4] == 'SAYI':
 				veri = int(tokenler[i + 2][5:])
 				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
 				YERLESTIR(tokenler[i + 1],str(var_data / veri))
 				
 				i += 3
-		elif  tokenler[i + 2][0:4] == 'DEGER:':
+			elif  tokenler[i + 2][0:4] == 'DEGER:':
 				veri =  int(DEGISKENAL(tokenler[i + 2][4:],semboller))
 				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
 				YERLESTIR(tokenler[i + 1],str(var_data / veri))
@@ -153,7 +153,7 @@ def parser(tokenler,i):
 				i += 3
 			else:
 				i += 3
-		elif tokenler[i] == 'EKSI':
+			elif tokenler[i] == 'EKSI':
 			if tokenler[i + 2][0:4] == 'OPERATION':
 				veri = eval(tokenler[i + 2][5:])
 				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
@@ -174,10 +174,10 @@ def parser(tokenler,i):
 				i += 3
 
 
-            else:
+            		else:
 				i += 1
 	except Exception as e:
-		if str(e) == "list index out of range":
-			pass
-		else:
-			print(e)
+			if str(e) == "list index out of range":
+				pass
+			else:
+				print(e)
