@@ -132,6 +132,12 @@ def parser(tokenler,i):
 				i += 3
 			else:
 				i += 3
+				
+			elif tokenler[i] == "YUVARLA":
+				veri = eval(tokenler[i + 2][5:])
+				var_data = int(DEGISKENAL(tokenler[i + 1][4:],semboller))
+				YERLESTIR(tokenler[i + 1],str(round(var_data,2)))
+			
 			elif tokenler[i] == 'BOL':
 			if tokenler[i + 2][0:4] == 'OPERATION':
 				veri = eval(tokenler[i + 2][5:])
