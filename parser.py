@@ -10,7 +10,7 @@ def YERLESTIR(varname, varvalue):
 	 
 def parser(tokenler,i):
     try:
-        	 while i < len(tokenler):
+       	while i < len(tokenler):
             if tokenler[i] == 'EGER':
                 if tokenler[i + 2] == 'ESIT':
                     if tokenler[i + 1][0:4] == "OPERATION":
