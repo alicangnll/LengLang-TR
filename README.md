@@ -1,6 +1,6 @@
 # LengLang-TR
 LengLang - Python-based Turkish Experimental Language
-<p align="left"><img src="https://alicangonullu.biz/goruntu/53" width="730px" height="460px"></p>
+<p align="left"></p>
 <hr></hr>
 <code>Sürüm v0.1
 Python : 2.7.16</code>
