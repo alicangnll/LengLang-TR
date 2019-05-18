@@ -59,7 +59,7 @@ def parser(tokenler,i):
                         while tokenler[i] != 'TEKRAR':
                             i += 1
                 
-            elif tokenler[i] == 'YAZDIR':
+            elif tokenler[i] == 'YAZ':
                 veri = tokenler[i + 1]
                 if veri[0] == '"':
                     veri = veri.replace('"', '')
