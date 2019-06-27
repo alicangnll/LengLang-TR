@@ -71,9 +71,6 @@ def leng2(filecontents):
 			elif tk == 'YAZ' or tk == 'yaz':
 				tokenler.append('YAZ')
 				tk = ''
-			elif tk == 'YUVARLA' or tk == 'yuvarla':
-				tokenler.append('YUVARLA')
-				tk = ''
 			elif tk == 'EKLE' or tk == 'ekle':
 				tokenler.append('EKLE')
 				tk = ''
@@ -95,10 +92,10 @@ def leng2(filecontents):
 			elif tk == 'ÇIK' or tk == "çık":
 				tokenler.append("CIK")
 				tk = ""
-			elif tk == 'yap' or tk == 'YAP':
+			elif tk == 'YAP' or tk == 'yap':
 				tokenler.append('YAP')
 				tk = ''
-			elif tk == 'eğer' or tk == 'EĞER':
+			elif tk == 'EĞER' or tk == 'eğer':
 				tokenler.append('EGER')
 				tk = ''
 			elif tk == 'İSE' or tk == 'ise':
