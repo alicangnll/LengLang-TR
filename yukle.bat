@@ -1,4 +1,4 @@
-﻿cls
+cls
 @echo LengLang v0.1
 @echo Lütfen Dosyalarınızı C:\Python27\Scripts knumuna kopyalayın
 @cd C:\Python27\Scripts
