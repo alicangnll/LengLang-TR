@@ -69,43 +69,43 @@ def leng2(filecontents):
 					var_basla = 0
 					tk = ''
 			elif tk == 'YAZ' or tk == 'yaz':
-				tokenler.append('YAZ')
+				tks.append('YAZ')
 				tk = ''
 			elif tk == 'EKLE' or tk == 'ekle':
-				tokenler.append('EKLE')
+				tks.append('EKLE')
 				tk = ''
 			elif tk == 'CARP' or tk == 'çarp':
-				tokenler.append('CARP')
+				tks.append('CARP')
 				tk = ''
 			elif tk == 'BOL' or tk == 'böl':
-				tokenler.append('BOL')
+				tks.append('BOL')
 				tk = ''
 			elif tk == 'EKSI' or tk == 'eksi':
-				tokenler.append('EKSI')
+				tks.append('EKSI')
 				tk = ''
 			elif tk == 'BOYLEYKEN' or tk == 'böyleyken':
-				tokenler.append('BOYLEYKEN')
+				tks.append('BOYLEYKEN')
 				tk = ''
 			elif tk == 'TEKRAR' or tk == 'tekrar':
-				tokenler.append('TEKRAR')
+				tks.append('TEKRAR')
 				tk = ''
 			elif tk == 'ÇIK' or tk == "çık":
-				tokenler.append("CIK")
+				tks.append("CIK")
 				tk = ""
 			elif tk == 'YAP' or tk == 'yap':
-				tokenler.append('YAP')
+				tks.append('YAP')
 				tk = ''
 			elif tk == 'EĞER' or tk == 'eğer':
-				tokenler.append('EGER')
+				tks.append('EGER')
 				tk = ''
 			elif tk == 'İSE' or tk == 'ise':
 				if express != '' and isexpress == 0:
-					tokenler.append('SAYI:' + express)
+					tks.append('SAYI:' + express)
 					express = ''
-				tokenler.append('ISE')
+				tks.append('ISE')
 				tk = ''
 			elif tk == 'GİRDİ' or tk == 'girdi' or tk == 'GİRİŞ' or tk == 'giriş':
-				tokenler.append('GIRDI')
+				tks.append('GIRDI')
 				tk = ''
 			elif tk == '0' or tk == '1' or tk == '2' or tk == '3' or tk == '4' or tk == '5' or tk == '6' or tk == '7' or tk == '8' or tk == '9' or tk == '(' or tk == ')':
 				express += tk
@@ -118,11 +118,11 @@ def leng2(filecontents):
 				if bolge == False:
 					bolge = True
 				elif bolge == True:
-					tokenler.append(string + '"')
+					tks.append(string + '"')
 					string = ''
 					bolge = False
 				tk = ''
 			elif bolge == True:
 				string += tk
 				tk = ''
-	return tokenler
+	return tks
