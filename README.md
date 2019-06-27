@@ -6,4 +6,5 @@ LengLang - Python-based Turkish Experimental Language
 Python : 2.7.16</code>
 <hr></hr>
 <code>Windows Kullanıcıları dosyalarını C:\Python27\Scripts içine atıverin :)
-Gerisini Kendi Halledecek</code>
+Gerisini Kendi Halledecek</code><br>
+<p> Site : https://alicangonullu.biz/konu/25</p>
