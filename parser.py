@@ -16,7 +16,7 @@ def parser(tks,i):
     try:
         while i < len(tks):
             if tks[i] == 'EGER':
-                if tks[i + 2] == 'ESES':
+                if tks[i + 2] == 'ESIT':
                     if tks[i + 1][0:4] == "OPER":
                         tks[i + 1] = "SAYI:" + str(eval(tks[i + 1][5:]))
                     if tks[i + 3][0:4] == "OPER":
