@@ -26,7 +26,7 @@ def leng2(filecontents):
 					express = ''
 					tk = ''
 			elif var != '':
-					tks.append('DEGER:' + var)
+					tks.append('DEG:' + var)
 					var = ''
 					var_basla = 0
 					tk = ''
@@ -38,7 +38,7 @@ def leng2(filecontents):
 						tks.append('SAYI:' + express)
 						express = ''
 			elif var != '':
-						tks.append('DEGER:' + var)
+						tks.append('DEG:' + var)
 						var = ''
 						var_basla = 0
 						tk = ''
@@ -49,7 +49,7 @@ def leng2(filecontents):
 					tks.append('SAYI:' + express)
 					express = ''
 				if var != '':
-					tks.append('DEGER:' + var)
+					tks.append('DEG:' + var)
 					var = ''
 					var_basla = 0
 				if tks[-1] == 'ESITTIR':
