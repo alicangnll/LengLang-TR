@@ -1,5 +1,5 @@
 all:
-	pyinstaller leng leng2.py parser.py dosya_ac.py --onefile
+	python2 pyinstaller leng leng2.py parser.py dosya_ac.py --onefile
 	mkdir ../bin
 	mv dist/leng ../bin/
 	@echo "Birlestirme : OK"
