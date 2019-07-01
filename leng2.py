@@ -18,7 +18,7 @@ def leng2(filecontents):
 			elif bolge == True:
 				tk = " "
 				if express != '' and isexpress == 1:
-					tks.append('OPERATION:' + express)
+					tks.append('OPER:' + express)
 					express = ''
 					tk = ''
 			elif express != '' and isexpress == 0:
@@ -32,7 +32,7 @@ def leng2(filecontents):
 					tk = ''
 		elif tk == '\n' or tk == '<EOF>':
 			if express != '' and isexpress == 1:
-						tks.append('OPERATION:' + express)
+						tks.append('OPER:' + express)
 						express = ''
 			elif express != '' and isexpress == 0:
 						tks.append('SAYI:' + express)
