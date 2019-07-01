@@ -18,7 +18,7 @@ def calis_shell():
                         veri = raw_input("<?>: ") + "\n<EOF>"
                         open(".shell_data","w").write(veri)
                         tks = leng2(veri)
-                        parser(tks,0)
+                        parser.parser(tks,0)
         except ValueError:
                                 print("HATA!")
                                 exit()
