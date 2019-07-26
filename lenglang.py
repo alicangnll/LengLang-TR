@@ -18,22 +18,22 @@ if __name__=="__main__":
 
     # The input .c file name
     parser.add_argument('input', metavar='input_file',
-                        type=argparse.FileType('r'), help="the input c file")
+                        type=argparse.FileType('r'), help="lng dosyasını derle")
 
     # The output file name
     parser.add_argument('-o', metavar='output_file', dest='output',
-                        help="the name for the output files")
+                        help="çıktı dosyası oluştur")
 
     # A flag to create only the asm file
     parser.add_argument('-S', dest='asm_only', action='store_const', const=True,
-                        default=False, help="create only the assembly file")
+                        default=False, help="sadece asm dosyası oluştur")
     args = parser.parse_args()
 
     try:
         # Read the input file
         program_text = args.input.read()
     except:
-        print("Could not read input file.")
+        print("Giriş Dosyası Oluşturulamadı.")
     else:
         # If the file opened and was read, then carry on with tokenizing
         try:
