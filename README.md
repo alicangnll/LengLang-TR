@@ -5,8 +5,4 @@ LengLang - C-based Turkish Experimental Language
 <code>Sürüm v2
 Python : 3.6</code>
 <hr></hr>
-<code>
-  Linux için
-  chmod +x test.sh
-  ./test.sh
-  </code>
+<code>Linux için : chmod +x test.sh &&./test.sh</code>
