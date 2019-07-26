@@ -1,10 +1,7 @@
 # LengLang-TR
-LengLang - Python-based Turkish Experimental Language
+LengLang - C-based Turkish Experimental Language
 <p align="left"></p>
 <hr></hr>
-<code>Sürüm v0.1
-Python : 2.7.16</code>
+<code>Sürüm v2
+Python : 3.6</code>
 <hr></hr>
-<code>Windows Kullanıcıları dosyalarını C:\Python27\Scripts içine atıverin :)
-Gerisini Kendi Halledecek</code><br>
-<p> Site : https://alicangonullu.biz/konu/25</p>
