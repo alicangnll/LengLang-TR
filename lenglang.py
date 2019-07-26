@@ -13,38 +13,38 @@ class NoMainFunctionException(Exception):
 
 if __name__=="__main__":
 
-    # Parse the command-line arguments
+
     parser = argparse.ArgumentParser(description='LengLang v2 Compiler.')
 
-    # The input .c file name
+
     parser.add_argument('input', metavar='input_file',
                         type=argparse.FileType('r'), help="lng dosyasını derle")
 
-    # The output file name
+
     parser.add_argument('-o', metavar='output_file', dest='output',
                         help="çıktı dosyası oluştur")
 
-    # A flag to create only the asm file
+
     parser.add_argument('-S', dest='asm_only', action='store_const', const=True,
                         default=False, help="sadece asm dosyası oluştur")
     args = parser.parse_args()
 
     try:
-        # Read the input file
+
         program_text = args.input.read()
     except:
         print("Giriş Dosyası Oluşturulamadı.")
     else:
-        # If the file opened and was read, then carry on with tokenizing
+
         try:
             token_list = tokenize(program_text, tokens.prims)
-        except TokenException as e: # catch any exceptions from the lexer
+        except TokenException as e:
             print(e)
             sys.exit(1)
         else:
             try:
-                # Parse the input into a syntax tree. See parser.py for
-                # documentation on what all these parameters are.
+
+
                 parse_root = generate_tree(token_list, rules.rules, rules.S,
                                            tokens.comment_start,
                                            tokens.comment_end,
@@ -54,35 +54,35 @@ if __name__=="__main__":
                                            pointer_rule = rules.E_point,
                                            dec_sep_rule = rules.declare_separator_base,
                                            dec_exp_symbol = rules.declare_expression)
-            except ParseException as e: # catch any exceptions from the parser
+            except ParseException as e: 
                 print(e)
                 sys.exit(1)
             else:
                 try:
-                    # As defined/explained in code_gen_obj.py
+
                     code = CodeManager()
                     info = StateInfo()
 
-                    # Traverse the tree and generate asm into the CodeManager object
+
                     info = make_code(parse_root, info, code)
 
-                    # Check if main function exists and has right type
+
                     mainfunc = info.get_func("main")
                     if mainfunc["args"] or mainfunc["ftype"] != Type("int", 0): raise NoMainFunctionException()
 
-                    # Saves code string to complete_code
+
                     complete_code = code.get_code(mainfunc["label"])
                 except (RuleGenException,
                         VariableRedeclarationException,
                         VariableNotDeclaredException,
                         NoMainFunctionException) as e:
-                    # Catch any exceptions from the code generation step
+
 
                     print(e)
                     sys.exit(1)
                 else:
                     try:
-                        # Open the file for saving generated asm code
+
                         if args.output: output_name = args.output
                         else: output_name = args.input.name.split(".")[0]
 
@@ -90,15 +90,15 @@ if __name__=="__main__":
                     except:
                         print("ASM Dosyası Oluşturulamadı.")
                     else:
-                        # Write the code to the file
+
 
                         g.write(complete_code)
                         g.close()
 
                         print("Derleme Tamamlandı.")
 
-                        # Compile the file into a final executable
-                        # TODO: check version of nasm first
+
+
                         if not args.asm_only:
                             subprocess.call(["nasm", "-f", "macho64", output_name + ".s"])
                             subprocess.call(["ld", output_name + ".o", "-o", output_name])
