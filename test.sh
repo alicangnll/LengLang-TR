@@ -1,5 +1,4 @@
 #!/bin/bash
-
 for file in dene.lng
 do
     if [ $(python3 lenglang.py $file |  grep "Bitti.") ]
