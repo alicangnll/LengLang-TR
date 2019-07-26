@@ -1,8 +1,3 @@
-"""
-Main file for ShivC. Compiles the provided C file into assembly, which is then
-assembled by NASM and linked by ld into a final executable.
-"""
-
 import sys, subprocess, argparse
 
 from lexer import *
