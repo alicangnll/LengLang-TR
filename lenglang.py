@@ -14,7 +14,7 @@ class NoMainFunctionException(Exception):
 if __name__=="__main__":
 
     # Parse the command-line arguments
-    parser = argparse.ArgumentParser(description='A small C compiler.')
+    parser = argparse.ArgumentParser(description='LengLang v2 Compiler.')
 
     # The input .c file name
     parser.add_argument('input', metavar='input_file',
@@ -88,14 +88,14 @@ if __name__=="__main__":
 
                         g = open(output_name + ".s", "w")
                     except:
-                        print("Could not create output asm file.")
+                        print("ASM Dosyası Oluşturulamadı.")
                     else:
                         # Write the code to the file
 
                         g.write(complete_code)
                         g.close()
 
-                        print("Compilation completed.")
+                        print("Derleme Tamamlandı.")
 
                         # Compile the file into a final executable
                         # TODO: check version of nasm first
