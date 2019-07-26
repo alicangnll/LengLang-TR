@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in tests/dene.c
+for file in dene.lng
 do
     if [ $(python3 lenglang.py $file |  grep "Bitti.") ]
     then
