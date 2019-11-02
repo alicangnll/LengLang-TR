@@ -2,7 +2,6 @@
 LengLang - C-based Turkish Experimental Language
 <p align="left"></p>
 <hr></hr>
-<hr></hr>
 <code>Linux için : chmod +x lenglang && ./lenglang test.lng</code><br>
 <code><pre>
 Syntax :
