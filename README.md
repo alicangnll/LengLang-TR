@@ -6,7 +6,7 @@ LengLang - C-based Turkish Experimental Language
 Python : 3.6</code>
 <hr></hr>
 <code>Linux için : chmod +x lengland && ./lenglang test.lng</code>
-<code>
+<code><pre>
 Syntax :
 /* Keywords*/
 "tamnum"                             {return INT;}
@@ -25,4 +25,4 @@ Syntax :
 "ise"                              {return IF;}
 "degilse"                            {return ELSE;}
 "don"                          {return RETURN;}
-</code>
+</pre></code>
