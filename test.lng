@@ -1,0 +1,33 @@
+tamnum fun(tamnum a, tamnum b, tamnum c)
+>>
+  don 2 ;
+<<
+
+tamnum main()
+>>
+
+  tamnum x = 1;
+
+  tamnum y;
+  tamnum z;
+
+  ise(x<0)
+  >>
+    tamnum y;
+
+    tamnum z=1;
+
+    >>
+      tamnum w =1;
+    <<
+    //w=3;
+  <<
+  char c='a';
+
+  icin(x=2;x<y;x++)
+  >>
+    dur;
+  <<
+  don 3;
+
+<<
