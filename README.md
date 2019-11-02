@@ -5,7 +5,7 @@ LengLang - C-based Turkish Experimental Language
 <code>Sürüm v2
 Python : 3.6</code>
 <hr></hr>
-<code>Linux için : chmod +x lengland && ./lenglang test.lng</code>
+<code>Linux için : chmod +x lenglang && ./lenglang test.lng</code>
 <code><pre>
 Syntax :
 /* Keywords*/
